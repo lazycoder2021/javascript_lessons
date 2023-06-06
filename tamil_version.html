@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Odd or Even Number JS Program</title>
+    <style>
+        * {
+            font-family: 'Roboto Slab';
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        
+
+        .menu-icon{
+            font-size:24px!important;
+            float:right;
+            margin-right:10px;
+            margin-top:10px!important;
+            display:none!important; 
+        }
+
+        h2 {
+            margin-top: 50px;
+            width:900px;
+        }
+
+        img {
+            border: 1px solid black;
+        }
+
+        .main-content {
+            margin-left: 350px;
+        }
+
+        .scroll-nav {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px 10px;
+            position: fixed;
+            top: 10px;
+        }
+
+        .scroll-nav__list {
+            margin: 0;
+            padding-left: 1.4em;
+            list-style-type: none;
+        }
+
+
+        .scroll-nav__item {
+            margin-bottom: 5px;
+        }
+
+
+
+        .scroll-nav__link {
+            color: #0645ad;
+            text-decoration: none;
+            //display: block;
+            //margin: 0 auto;
+            //padding-left: 42px;
+        }
+
+        .main_content {
+            padding: 20px;
+        }
+
+        .scroll-nav__item--active {
+            font-weight: 600;
+            position: relative;
+        }
+
+            .scroll-nav__item--active::before {
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                background: black;
+                position: absolute;
+                left: -20px;
+                top: 2px;
+            }
+
+            .hide{
+                display:none; 
+            }
+
+        @media screen and (min-width: 700px) {
+
+            .scroll-nav {
+                padding: 15px 10px;
+                width: 200px;
+                top: 60px;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            .scroll-nav {
+                width: 300px;
+            }
+        }
+
+
+
+        @media screen and (min-width: 700px) {
+
+            .scroll-nav {
+                margin-left: 210px;
+                padding: 30px;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            .scroll-nav {
+                margin-left: 0px;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+
+            
+            
+
+            .scroll-nav {
+                margin-left: 0px;
+                display:none;  
+                width:460px;
+            }
+
+            .main-content {
+                padding:0px 10px;
+                margin-left:0px;
+            }
+
+            h2 {
+                margin-top: 0px;
+            }
+
+            .menu-icon {
+                font-size: 24px !important;
+                float: right;
+                margin-right: 10px;
+                margin-top: 10px !important;
+                display: block !important;
+            }
+
+            .subheading {
+                width: 450px!important;
+                line-height: 25px;
+            }
+
+            .numbered_list {
+                width: 450px!important;
+                line-height: 35px;
+            }
+
+            .note-important {
+                border-left: solid 7px #006699;
+                border-top: solid 1px #f0f7fb;
+                border-right: solid 1px #f0f7fb;
+                border-bottom: solid 1px #f0f7fb;
+                border-radius: 5px 0 0 5px;
+                background-color: #f0f7fb;
+                line-height: 28px;
+                overflow: hidden;
+                padding: 12px;
+                width: 450px!important;
+            }
+
+                .note-important::before {
+                    content: "Important: ";
+                    font-weight: bold;
+                }
+        }
+
+        .subheading{
+            width:800px;
+            line-height:25px;
+        }
+
+        .numbered_list{
+            width:800px;
+            line-height:30px;
+        }
+
+
+        .note-important {
+            border-left: solid 7px #006699;
+            border-top: solid 1px #f0f7fb;
+            border-right: solid 1px #f0f7fb;
+            border-bottom: solid 1px #f0f7fb;
+            border-radius: 5px 0 0 5px;
+            background-color: #f0f7fb;
+            line-height: 28px;
+            overflow: hidden;
+            padding: 12px;
+            width:1000px;
+        }
+
+            .note-important::before {
+                content: "Important: ";
+                font-weight: bold;
+            }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <article class="main-content">
+        <i class="fa fa-reorder menu-icon"></i>
+        <h3 style="font-weight:100;">இவன் நம்பர்á? ஆடு நம்பர்á? JavaScript ப்ரோக்ராம் </h3>
+        <p class="subheading">இவன் நம்பர்á? ஆடு நம்பர்á? கண்டுபிடி குறத்துக்கு ஒரு சிம்பிள் JavaScript ப்ரோக்ராம் எப்படி பண்ணல னு பாக்கலாம். </p>
+        <img src="100-1.gif" height="300" />
+
+        <h2 style="font-weight:100;">ஸ்டேப் 1: HTML எலிமெண்ட்ஸ் ரெடி பண்ணுங்க </h2>
+        <p>யூசர் இன்புட் வாங்குறதுக்கு ஒரு HTML இன்புட் பஇக்சு அண்ட் பட்டன் தெய்வேப்படும்.</p>
+        <ol class="numbered_list">
+            <li>
+                இன்புட் போஸ் வெறும் நம்பர் மட்டும் ஈண்டெர் பண்ண ஆளா பண்ண நும். இது பண்றதுக்கு இன்புட் போஸ் ஓட <b>"type"</b> அட்ட்ரிபூட் ட நீங்க <b>"number"</b> னு செட் பண்ணனும். இத எப்படி பண்றது னு கீழ இருக்குற இமேஜ் ல நீங்க பாக்கலாம்.
+            </li>
+            <li>
+                அடுத்ததா இன்புட் பஇக்சு JavaScript வழிய செலக்ட் பண்றதுக்கு அதுக்கு ஒரு <b>class</b> கொடுங்க. அந்த class'கு பெரு <b>"name"</b> னு கொடுங்க.
+            </li>
+            <li style="margin-bottom:10px;">கடைசியா ஒரு பட்டன் கிரேட் பண்ணுங்க, அதுக்கு "Check Number" னு பெரு கொடுங்க</li>
+
+            <img src="100-2.gif" height="300" />
+
+            <li style="margin-bottom:10px;">HTML பைலை save பண்ணிட்டு ஓங்க browser'ல ஓபன் பண்ணி பாருங்க. நீங்க கிரேட் பண்ண பயில் இமேஜ் ல கட்டுன மாதிரி இருக்கணும் </li>
+            <img src="100-3.JPG" height="200" width="500" style="object-fit:cover" />
+
+        </ol>
+
+        <p class="note-important">இப்போதைக்கு உங்க HTML எலிமெண்ட்ஸ் வேறு எலிமெண்ட்ஸ் டான். லாஜிக்  JavaScript வழிய டான் எலுதா முடியும். </p>
+
+
+
+
+       
+        <h2 style="font-weight:100;">
+            ஸ்டேப் 2: பட்டன் னுக்கு JavaScript EventListener அட்பண்ணுங்க
+        </h2>
+
+        <p class="note-important">உங்க JavaScript எப்போதுமே &lt;script&gt; &lt;/script&gt; உள்ள &lt;/body&gt; கு மேல இருக்கணும் </p>
+            
+        <p class="subheading">யூசர் என்தர் பண்ற நம்பர் வாங்கணும் இல்லையா?  அதுக்கு டான் EventListener ஆட்டுபண்றோம். Event listener'ஆ எப்படி அட் பண்ணல கேழே இர்ருக்குற படத்துல நீங்க பாக்கலாம் </p>     
+           <img src="100-4.gif" height="500" style="margin-top:5px;" />
+            
+            <p>Event Listener ஆட் பண்றதுக்கு நீங்க பண்ணவேண்டிய  ஸ்டெப்ஸ்:  </p>    
+            <ol class="numbered_list">
+                
+                <li><a href="#">document.querySelector()</a> method யூசு பண்ணி பட்டன JavaScript வழிய செலக்ட் பண்ணுங்க  </li>
+                
+                <li>அடுத்ததாக <a href="#">addEventListener()</a> method யூஸ் பண்ணி பாட்டனுக்கு EventListener அடு பண்ணுங்க  </li>
+                <li> EventListener அட் பண்ணும்போது  2 விசயங்களை நீங்க பண்ணனும்  </li>
+                <ul>
+                    
+                    <li>ஒன்று, எந்த மாதிரியான event ட அட் பண்ண பொன்கிறீங்ககுருத்து முடிவு செய்யணும் .நம்ம பட்டன் (button) ஓட டீல் பன்றதனால event கிளிக் (click) event'டாக தான் இருக்கும். </li>
+                    
+                    <li>இரண்டு, click event நடக்கும் பொது, யூசர் இன்டர் பண்ற நம்பர் ஆட இல்ல இவன் ந னு கண்டுபுடிக்குற லாஜிக் ஒரு JS function ல எழுதணும் </li>
+
+                </ul>
+
+            </ol>
+            <p class="note-important">இப்போதைக்கு function வெறும் 'checking number...' என்கிற மெசேஜ் டிஸ்பிலே பண்ணுகிறது. இதை பின்னர் 'நம்பர் அட இல்ல இவானா' செக் பண்ணற மாதிரி மாற்றலாம் </p>
+
+            <h2 style="font-weight:100;">ஸ்டேப் 3 : யூசர் இன்டர் பண்ற நம்பர்á வாங்குறது </h2>
+            
+            <img src="100-5.gif" height="400" style="margin-top:5px;" /><br /><br />
+            
+            <p class="note-important">யூசர் இன்புட் பக்ஸ் ல இன்டர் பண்ற நம்பர்á <a href="#">document.querySelector()</a> method யூஸ் பண்ணி வாங்கி, அதை ஒரு JS variable ல ஸ்டார் பண்ணுங்க. JS variable யூசர் இன்புட்டா கரெக்ட்டா ஸ்டார் பன்னீர்க்க இல்லையா என்று நீங்க கேழே இறக்கும் படத்துல கட்டுனமாதிரி ஒரு அலெர்ட் மெசேஜ் யூஸ் பண்ணி செக் பன்னிகுள. </p>
+            <img src="100-6.gif" height="400" style="margin-top:5px;" />
+
+            <h2 style="font-weight:100;">ஸ்டேப் 4 : Modulus Operator (%) யூஸ் பண்ணி நம்பர் அட இல்ல இவன்á னு கடுபிடிக்குறது </h2>
+            
+            <p class="subheading">JavaScript Modulus operator (%) 2 நும்பேர்கள் divide பண்ணும்போது வரக்கூடிய ரிமைண்டர் அ return பண்ணும். இதை யூஸ் பண்ணி நம்பர் இவன்á இல்ல அட னு கண்டுபிடிச்சல. அதுபோக நம்ம கிட்ட 2 கண்டிஷன்கல் இருக்கு. யூசர் இன்டர் பண்ற நம்பர் இவன்á இருக்கல இல்ல அட இருக்கல. சோ இதை ஹண்ட்லே பண்ண, நம்ம Modulus Operator(%) ரா if-else condition கு உள்ள யூஸ் பண்ணனும்.  </p>    
+        <img src="100-7.gif" height="400" style="margin-top:5px;" />
+        <p>சோ யூசர் இன்டர் பண்ற நம்பர் 2 ஆல divide பண்ணும்போது: </p>
+        <ul class="numbered_list">
+            
+            <li>Remainder <a href="#" style="text-decoration:none;">==</a>௦ நா, இன்டர் பண்ண நம்பர் இவன் நம்பர் ஆ இறக்கும்</li>
+            <li>Remainder <a href="#" style="text-decoration:none;">!= </a> நா, இன்டர் பண்ண நம்பர் அட் நம்பர் ஆ இறக்கும் </li>
+        </ul>
+
+
+</article>
+
+    <script src="https://unpkg.com/scrollnav@3.0.2/dist/scrollnav.min.umd.js"></script>
+    <script>
+        const content = document.querySelector('.main-content');
+        scrollnav.init(content);
+
+
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            document.querySelector('.scroll-nav').style.display = 'block'; 
+        })
+
+        
+    </script>
+</body>
+</html>
